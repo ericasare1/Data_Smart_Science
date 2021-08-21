@@ -18,26 +18,29 @@ print(df)
 
 
 #General way to select in base R
-# nameOfData[command to select rows , command to select columns]
+nameOfData[command to select rows , command to select columns]
 
 #1a. First way to select rows: Using row positional numbering (starts from 1 ...)
 firstway_row <- df[ c(1:4) , ]   # or
+
 firstrow_filter <-  c(1, 4)
 firstway_row2 <- df[firstcol_filter, ]
 
 #or removing rows you do not want
 firstwayrow_otherway <- df[-c(2:3), ] # if you want to select rows from 2 to 10 use c(2:10)
 
-#1b. selecyt rows based on certin values in column: say select only males in sex
-secondway_row <- df[which(df$sex == "Male"), ]
+#1b. select rows based on certin values in column: say select only males in sex
+secondway_row <- df[which(df$sex == "Female"), ]
 #select rows based on compound conditions
-secondway_rowcompound <- df[which(df$sex == "Male" & df$name == "Eric"), ]
+secondway_rowcompound <- df[which(df$sex == "Male" & df$name == "Eric", ]
+secondway_rowcompound2 <- df[which(df$sex == "Male" | df$name == "Eric"), ]
+
 
 #1b. use the subset function takes three arguments:
 # argument 1: name of data frame
 # argument 2: command to select rows
 # aregment 3: command to select columns
 
-thirdway_row <- subset(df, Sex == "Male" ,)
+thirdway_row <- subset(df, Sex == "Male" , )
 thirdway_row2 <- subset(df, Sex == "Male" & name == "Eric",   )
 

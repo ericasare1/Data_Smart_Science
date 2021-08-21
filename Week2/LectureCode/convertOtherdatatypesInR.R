@@ -7,7 +7,7 @@
 #---- #1. Converting SPSS data to R data frame ----
 # ----------------------------------------------------------------- #
 install.packages("Hmisc")
-library(Hmisc)
+library("Hmisc")
 #mydata <- spss.get("c:/mydata.por", use.value.labels=TRUE)
 
 #----------------------------------------------------------------- #
@@ -21,8 +21,8 @@ library(Hmisc)
 #---- #1. Converting STATA data to R data frame ----
 # ----------------------------------------------------------------- #
 install.packages("foreign")
-library(foreign)
-#mydata <- read.dta("c:/mydata.dta")
+library("foreign")
+mydata <- read.dta("adressOfdata.dta")
 
 
 

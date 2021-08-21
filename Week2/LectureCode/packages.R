@@ -7,9 +7,9 @@
 #---- #1. What is a package                   ----
 # ----------------------------------------------------------------- #
 
-R packages are developed by the R Community.
+#R packages are developed by the R Community.
 
-It is collections of functions and data set.seed.
+#It is collections of functions and data set.
 
 
 # ----------------------------------------------------------------- #

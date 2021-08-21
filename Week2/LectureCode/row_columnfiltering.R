@@ -22,6 +22,8 @@ print(df)
 
 #1a. First way to select rows: Using row positional numbering (starts from 1 ...)
 firstway_rowcol <- df[ c(1:4) , c(1, 4)]   # or
+
+#line 27 and 28 is the same as line 24
 firstrow_filter <-  c(1, 4)
 firstway_rowcol <- df[firstcol_filter, firstcol_filter]
 
@@ -29,7 +31,7 @@ firstway_rowcol <- df[firstcol_filter, firstcol_filter]
 firstwayrowcol_otherway <- df[-c(2:3), -c(2:3)] # if you want to select rows from 2 to 10 use c(2:10)
 
 #1b. select rows based on certain values in column: say select only males in sex
-secondway_rowcol <- df[which(df$sex == "Male"), c("age", "savings")]
+secondway_rowcol <- df[which(df$sex == "Male"), c("age", "sex", "savings")]
 #select rows based on compound conditions
 secondway_rowcol_compound <- df[which(df$sex == "Male" & df$name == "Eric"), c("age", "savings")]
 
