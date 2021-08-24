@@ -1,13 +1,18 @@
 
+# ----------------------------------------------------------------- #
+#---- Using functions and control structures together
+# ----------------------------------------------------------------- #
+
+
 # create a function:
   a) net present value of profit each year for T
   b) odd years profit is 20
   c) for even years profit is 10
-c)interest = 10
+  d)interest = 10
 
-  t= 1,  2, 3, 4, 5, 6, 7, 8, 9, 10
-  odd, even, old, even,....
-  20, 10, 20, 10, 20, 10 .....
+  t= 1,    2,   3,    4,   5, 6, 7, 8, 9, 10
+     odd, even, old, even,....
+     20,   10,  20,   10,  20, 10 .....
   
   formula = profit/(1+r)^t
   
@@ -16,20 +21,8 @@ c)interest = 10
   time = 3: 20/(1+(10/100))^3
   time = 4: 10/(1+10/100)^4  tth iteration
   
-  # Initialize `usq`
-  pv = 0
+#solution
   
-  for(i in 1:t) {
-    if(i %% 2 == 0){
-      pv <- 10/(1+(r/100))^i
-    } else{
-      pv <- 20/(1+(r/100))^i
-    }
-  }
-  
-  return((pv))
-
-
 npv <- function(profit_even, profit_odd, interest_rate, time) {
   
   # Initialize
