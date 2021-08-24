@@ -2,24 +2,25 @@
 # ################################################################# #
 ####                     Control structures                           ####
 # ################################################################# #
-1. The provide logit to the code execution
-2. Controls the flow of execution of codes
+
+#1. They provide logit to the code execution
+#2. Controls the flow of execution of codes
 
 
 # ----------------------------------------------------------------- #
-#---- Ifelse
+#----1.  Ifelse
 # ----------------------------------------------------------------- #
-structure in R:
+
+#structure in R:
   
   if(condition){
-    do something
-  } 
-  else {
-    do something else
+      #  do something
+  }else {
+   # do something else
   }
+#notes: the condition is examined and if it holds "do something" is printed otherwise "do something else" is printed
 
-
-#ex. 
+#ex1. 
 x <- 2
 
 n <- if(x > 1) {
@@ -32,27 +33,30 @@ n <- if(x > 1) {
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 # ----------------------------------------------------------------- #
-#---- #1.For loops
+#---- #2. For loops
 # ----------------------------------------------------------------- #
-1. It allows a code to be executed repeatedly
+
+#1. It allows a code to be executed repeatedly
  
 
 #structure
  for (i in iterator){
    
-  action code must do
+  #action code must do
+   
  }
 
+#note: the iterator lists number of times the loop is executed and in which sequence
+      
 # Ex. 1
-1, 2, 3, 4, 5 .... 10
-print(1)
-print(2)
 
 for(i in c(1:5)) {
   
            print(i)
    }
 
+
+# We will talk more about the control structures below in the ML stream
 
 # Nested loops
 x <- matrix(1:6, 2, 3)
@@ -68,8 +72,8 @@ for(i in seq_len(nrow(x))) {
 # ----------------------------------------------------------------- #
 #---- While loop
 # ----------------------------------------------------------------- #
-1. a condition is tested 
-2. while the condition is true the code will be executed
+#1. a condition is tested 
+#2. while the condition is true the code will be executed
 
 count <- 0
 
@@ -78,4 +82,3 @@ while(count < 10) {
   count <- count + 1
   
 }
-op
