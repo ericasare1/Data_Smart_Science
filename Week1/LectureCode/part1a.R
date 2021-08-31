@@ -22,7 +22,7 @@ Money_in_Account <- c(30.00, 40.01, 600.04, 400.98, 4999.9, 300000)
 # ----------------------------------------------------------------- #
 #---- #2. Checking the attributes of above vectors              ----
 # ----------------------------------------------------------------- #
-length(Name)
+length(Age)
 typeof(Age)
 class(Name)
 as.character(Age)
@@ -34,7 +34,7 @@ as.character(Age)
 
 data.frame(Age, Name, Sex, Money_in_Account)
 excel_data <- data.frame(Age, Name, Sex, Money_in_Account)
-excel_data_copy <- data.frame(age=Age, name= Name, sex = Sex, savings = Money_in_Account)
+excel_data_copy <- data.frame(age=Age, name= Name, sex = Sex, savings = Money_in_Account) 
 print(excel_data_copy)
 
 

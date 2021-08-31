@@ -13,12 +13,13 @@
 #---- #1. Function Template in R ----
 # ----------------------------------------------------------------- #
 
-#nameOffunction <- function(arguments){
+(1)nameOffunction <- (2)function(arguments){
   
-#  1. first instruction: what you want the function to do!
+  (3). first instruction: what you want the function to do!
     
-#  2. second instruction: return(what that function must show)
-#  }
+  (4) second instruction: return(what that function must show)
+}
+
 
 
 #Ex1. create a function to estimate the square of a number
@@ -31,7 +32,7 @@ square_of_number <- function(x){
   
 }
 
-square_of_number(x=5)
+square_of_number(x=1000)
 
 #ex2: create a function that adds three numbers:  x, y, z
 add_three_numbers <- function(x, y, z){

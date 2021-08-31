@@ -23,22 +23,24 @@ print(df)
 #1a. First way to select column: Using column positional numbering (starts from 1 ...)
     #Eg. I want to select first column (age with pos 1) and last col (savings with pos 4)
 #function
-nameOfdataset[ row condition to select rows, column condition to select column]
+(1)nameOfdataset[ (2)rule that will select rows, (3) rule to select columns]
+(1)df[Sex == "male", c(1:6)]
+
 
 firstway <- df[ , c(1,2, 4)]   # or
 print(firstway)
 
-firstcol_filter <-  c(1, 4)
+"firstcol_filter <-  c(1, 4)
 
 firstway_copy <- df[ , firstcol_filter ]
-print(firstway_copy)
+print(firstway_copy)"
 
  #or removing columns you do not want
 firstway_otherway <- df[ , -c(2, 3)] # if you want to select col from 2 to 10 use c(2:10)
 print(firstway_otherway)
 
 #1b. Using names of columns to do subselection
-secondway <- df[ , names(df) %in% c("age","name", "savings")]
+secondway <- df[ , names(df) %in% c("age","name", "savings")] 
 
 #1b. use the subset function takes three arguments:
     # argument 1: name of data frame

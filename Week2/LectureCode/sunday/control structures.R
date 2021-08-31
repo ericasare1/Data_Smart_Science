@@ -13,7 +13,7 @@
 
 #structure in R:
   
-  if(condition){
+(1)if((2)condition){
       #  do something
   }else {
    # do something else
@@ -23,13 +23,13 @@
 #ex1. 
 x <- 2
 
-n <- if(x > 1) {
+n <- if(x > 3) {
   "true"
 } else { 
   "false you lied"
 }
 
-
+n
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 # ----------------------------------------------------------------- #
