@@ -1,0 +1,2 @@
+,id,first_name,last_name,dob DATE,email
+0,SERIAL,Eric,Asare,1990-01-02,eric@gmail.com
