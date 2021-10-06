@@ -8,7 +8,13 @@ In this chapter we will show the steps involved in connecting a Postgresql to py
 
 ### Chapter 2: Data types
 
-Here we will explore the fundamental information or atomic information that are used to create variables in the tables of a database.
+Here we will explore the fundamental information or atomic information that are used to create variables in the tables of a database.   
+
+### Chapter 3: Creating Tables & Inserting Values   
+
+Following from chapter 2, we will create a table and define the columns in the table with data types. We will also insert values in the table columns.
+
+
 
 
 
