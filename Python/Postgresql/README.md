@@ -1,4 +1,5 @@
 # Postgresql with Python 
+![](postgresql.jpg)
 
 ## This folder contains chapters of Postgresql with python lecture notes for the Data Smart Science course: Database and SQL. The Postgresql codes will be applied to solving real world data wrangling problems. The descriptions of the individual chapters will be added to this document as new chapters are added to the folder: 
 
