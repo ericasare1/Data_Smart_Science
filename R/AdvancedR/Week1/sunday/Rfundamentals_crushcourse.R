@@ -56,7 +56,6 @@ Total_revenue2 <- function(price_corn, quantity_sold_corn, rain){
 revenue3 <- Total_revenue2(price_corn=5, quantity_sold_corn=20, rain = "no") # i like this way of using created functions
 revenue3
 
-
 #with three conditions
 #condition: cloudy   b. sunny  c. rainy
 
