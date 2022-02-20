@@ -1,0 +1,14 @@
+field,description
+date,Date of accident
+time,"Local time, in 24 hr. format unless otherwise specified"
+location,Location information
+operator,Airline or operator of the aircraft
+flight_no,Flight number assigned by the aircraft operator
+route,Complete or partial route flown prior to the accident
+ac_type,Aircraft type
+registration,ICAO registration of the aircraft
+cn_ln,Construction or serial number / Line or fuselage number
+aboard,Total aboard (passengers / crew)
+fatalities,Total fatalities aboard (passengers / crew)
+ground,Total killed on the ground
+summary,Brief description of the accident and cause if known

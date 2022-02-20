@@ -1,0 +1,105 @@
+﻿"Cube Title","Product Id","CANSIM Id",URL,"Cube Notes","Archive Status",Frequency,"Start Reference Period","End Reference Period","Total number of dimensions"
+"Farm product prices, crops and livestock","32100077","002-0043","https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3210007701",1,"CURRENT - a cube available to the public and that is current","Monthly","1980-01-01","2021-12-01","2",
+
+"Dimension ID","Dimension name","Dimension Notes","Dimension Definitions"
+"1","Geography",,""
+"2","Farm products",13,""
+
+"Dimension ID","Member Name","Classification Code","Member ID","Parent Member ID",Terminated,"Member Notes","Member Definitions"
+"1","Newfoundland and Labrador","[10]","1","","",,
+"1","Prince Edward Island","[11]","2","","",,
+"1","Nova Scotia","[12]","3","","",,
+"1","New Brunswick","[13]","4","","",,
+"1","Quebec","[24]","5","","",,
+"1","Ontario","[35]","6","","",,
+"1","Manitoba","[46]","7","","",,
+"1","Saskatchewan","[47]","8","","",,
+"1","Alberta","[48]","9","","",,
+"1","British Columbia","[59]","10","","",,
+"2","Ontario wheat including payments","","1","","",2,
+"2","Ontario wheat excluding payments","","2","","",3,
+"2","Wheat (except durum wheat)","[1121111]","3","","",9,
+"2","Canadian Wheat Board, wheat including payments","","4","","t",4;10,
+"2","Canadian Wheat Board, wheat excluding payments","","5","","t",5;10,
+"2","Canadian Wheat Board, durum including payments","","6","","t",4;10,
+"2","Canadian Wheat Board, durum excluding payments","","7","","t",5;10,
+"2","Canadian Wheat Board, barley including payments","","8","","t",4;10,
+"2","Canadian Wheat Board, barley excluding payments","","9","","t",5;10,
+"2","Canadian Wheat Board, selected barley including payments","","10","","t",4;10,
+"2","Canadian Wheat Board, selected barley excluding payments","","11","","t",5;10,
+"2","Non-board wheat (except durum wheat)","","12","","t",,
+"2","Oats","[115113111]","13","","",,
+"2","Barley","[1151141]","14","","",11;12,
+"2","Soybeans","[1151211]","15","","",,
+"2","Corn for grain","[1151111]","16","","",,
+"2","Flaxseed","[115122111]","17","","",,
+"2","Canola (including rapeseed)","[113111]","18","","",,
+"2","Rye","[1151152]","19","","",,
+"2","Lentils","[114312]","20","","",,
+"2","Dry peas","[114314]","21","","",,
+"2","Canary seeds","[11511555]","22","","",,
+"2","Fresh potatoes","[114211]","23","","",,
+"2","Fresh potatoes for seed","[114211311]","24","23","",,
+"2","Fresh potatoes for table consumption","[114211111]","25","23","",,
+"2","Fresh potatoes for processing","[114211211]","26","23","",,
+"2","Cattle for slaughter","[11111111]","27","","",,
+"2","Cows for slaughter","[111111111]","28","27","",,
+"2","Calves for slaughter","[111111211]","29","","",,
+"2","Steers for slaughter","[111111113]","30","27","",,
+"2","Heifers for slaughter","[111111114]","31","27","",,
+"2","Lambs for slaughter","[111141121]","32","","",,
+"2","Cattle for feeding","[11111112]","33","","",14,
+"2","Calves for feeding","[11111122]","34","","",,
+"2","Steers for feeding","[111111121]","35","33","",,
+"2","Heifers for feeding","[111111122]","36","33","",,
+"2","Hogs","[111121]","37","","",,
+"2","Chickens for meat","[11113131]","38","","",6,
+"2","Turkeys for meat","[111132211]","39","","",,
+"2","Unprocessed milk from bovine","[11612111]","40","","",7,
+"2","Eggs in shell","[116111]","41","","",,
+"2","Wheat (except durum wheat), milling","","42","3","",,
+"2","Wheat (except durum wheat), other","","43","3","",,
+"2","Durum wheat","[112111211]","44","","",,
+"2","Barley for animal feed","[115114111]","45","14","",,
+"2","Barley for malt and other human consumption","[11511412]","46","14","",,
+
+Symbol Legend
+Description,Symbol
+"not available for a specific reference period","..",
+"less than the limit of detection","<LOD",
+"value rounded to 0 (zero) where there is a meaningful distinction between true zero and the value that was rounded","0s",
+"data quality: excellent","A",
+"data quality: very good","B",
+"data quality: good","C",
+"data quality: acceptable","D",
+"use with caution","E",
+"too unreliable to be published","F",
+"not applicable","...",
+"preliminary","p",
+"revised","r",
+"suppressed to meet the confidentiality requirements of the Statistics Act","x",
+"terminated","t",
+
+"Survey Code","Survey Name"
+"3436","Farm Product Prices Survey"
+"5040","Farm Product Price Index"
+
+"Subject Code","Subject Name"
+"32","Agriculture and food"
+
+"Note ID",Note
+1,"Commodity prices are collected at point of first transaction, where fees deducted before a producer is paid are excluded (for example, storage, transportation and administration costs), but any bonuses and premiums that can be attributed to specific commodities are included. Commodity-specific program payments are not included in the price."
+13,"Commodity names have been adjusted to align with the <a href="http://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=1196978">Variant of North American Product Classification System (NAPCS) Canada 2017 Version 2.0 - Agricultural goods</a>."
+2,"These prices include initial, adjusted initial, interim and final payments made by the Ontario Wheat Producers' Marketing Board on a retroactive basis."
+3,"These prices exclude payments made for initial price increases, interim and final payments made from the Ontario Wheat Producers' Marketing Board."
+9,"Wheat (except durum wheat) prices include the weighted average prices of milling and other wheat (except durum wheat). Wheat (except durum wheat), other includes wheat used for animal feed, as well as for the production of ethanol."
+4,"These prices include initial, adjusted initial, interim and final payments made by the Canadian Wheat Board on a retroactive basis."
+10,"Starting in crop-year 2012-2013, following the enactment of Bill C-18, the Canadian Wheat Board is no longer the sole purchaser of wheat and barley for domestic human consumption and export. Producers now have the option of selling their grain directly to buyers."
+5,"These prices exclude payments made for initial price increases, interim and final payments made by the Canadian Wheat Board."
+11,"For Manitoba, Saskatchewan, Alberta and British Columbia, prior to the 2012-2013 crop year, barley prices included only non-board barley."
+12,"Barley prices include the weighted average prices of barley for animal feed and barley for malt and other human consumption."
+14,"For Alberta, cattle for feeding prices include the weighted average prices of steers for feeding, heifers for feeding, bulls for feeding and cows for feeding. For New Brunswick, Manitoba, Saskatchewan and British Columbia, cattle for feeding prices include the weighted average prices of steers for feeding and heifers for feeding. For Prince Edward Island and Nova Scotia, cattle for feeding prices include the weighted average prices of steers for feeding, heifers for feeding and bulls for feeding."
+6,"Chicken prices include the weighted average prices of both broilers and heavier birds."
+7,"Subsidies for unprocessed milk from bovine ended in May 2002."
+
+"Correction ID","Correction Date","Correction Note"
