@@ -84,3 +84,8 @@ df16 <- gapminder %>% group_by(continent) %>% summarise(
 
 view(df16)
 
+#>>>>> sourcing functions
+source("functions/function_script1.R")
+sum_values(x=2, y=5)
+
+

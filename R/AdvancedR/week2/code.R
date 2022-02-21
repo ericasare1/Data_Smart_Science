@@ -28,7 +28,6 @@ grades <- data.frame(
   marks = c(60, 70, 0.005, 0.0045, 90, 90, 100)
 ) 
 
-%>%
 #second create two more variables based on existing variables in the data.frame
 
 mutate(
@@ -37,27 +36,11 @@ mutate(
 )
 
 #rename see_me   to come_quick
-%>%
 rename()
 
 #%>%  #magister
 #mutate()
 #ifelse()
-
-if(condition){
-  rule
-}
-elseif(){}
-elseif(){}
-elseif(){}
-elseif(){}
-elseif(){}
-elseif(){}
-elseif(){}
-elseif(){}
-elseif(){}
-elseif(){}
-else{}
 #case_when()
 
 #Lets see what we created
