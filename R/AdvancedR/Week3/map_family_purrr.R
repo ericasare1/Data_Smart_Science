@@ -34,15 +34,21 @@ map(Age_presidents, median)
 
 
 #___________________________________________________map2
-x <- c(1, 2, 4)
+x <- c(0, -2, 4)
+length(x)
 y <- c(6, 5, 3)
+length(y)
 
-map2(x, y, min)
+seth <- function(x,y){
+  x+y
+  }
+ 
+map2(x, y, seth)
 
 x1 <- c(1, 2, 4)
 y1 <- c(6, 5)
 
-map2(x1, y1, min)
+map2(x1, y1, seth)
 
 #___________________________________________________pmap: instead of map3(), map4()....
 
