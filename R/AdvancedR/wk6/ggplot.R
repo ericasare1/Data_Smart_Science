@@ -1,4 +1,4 @@
-
+library(tidyverse)
 library(ggplot2)
 
 data(mtcars)
@@ -120,10 +120,12 @@ bx1 + theme(legend.position="bottom")  #move legends to the bottom of the plot
 bx1 + theme(legend.position="none") #No legend
 
 
-# bar chart
+# ________________________________bar chart
 df <- data.frame(
   
-  gdp_capita = rnorm(1000, 200, 54000)
+  gdp_capita = runif(1000, 200, 54000),
+  population = abs(rnorm(1000, 200, 54000))
+  
 ) %>% 
   mutate(income_group = case_when(
     gdp_capita < 1000 ~ "low_income",
@@ -133,13 +135,14 @@ df <- data.frame(
          
 )
 
-view(df)
+unique(df$income_group)
 
 
 #bar chart
 a <- df %>%
   group_by(income_group) %>%
   summarize(num_countries = n()) 
+view(a)
 
 bar1 <- a %>%
   ggplot(aes(x = income_group, y = num_countries)) + geom_col()
@@ -149,66 +152,82 @@ bar2 <- df %>%
   ggplot(aes(income_group)) + geom_bar()
 
 
-#one plot on top of each other
+#___________________________one plot on top of each other
 
 bar3 <- a %>%
   ggplot(aes(x = income_group, y = num_countries)) + geom_col() +
   geom_point(aes(x = income_group, y = num_countries)) +
+  #geom_line(aes()) +
+  #geom_boxplot(aes()) +
   theme_bw()
 
 
-#detecting outliers
+#________________________________________detecting outliers _______________
+#method 1
+outlier2 <- df %>% 
+  ggplot(aes(x = "", y = population)) +
+  geom_boxplot()
+
+#method 2
+outlier3 <- df %>% 
+  ggplot(aes(x = "", y = population)) +
+  geom_boxplot(outlier.colour="red", outlier.shape=4,
+               outlier.size=4)
+
 #method1
-Q <- quantile(df$gdp_capita, probs=c(.25, .75), na.rm = FALSE)
+Q <- quantile(df$population, probs=c(.25, .75), na.rm = FALSE)
 inter_qr <- IQR(Q)
 
 up_cutoff_outliers <-  Q[2]+1.5*inter_qr # Upper Range  
 lower_cutoff_outliers <-  Q[2]-1.5*inter_qr # Upper Range 
 
-#method 2
-outlier2 <- df %>% 
-  ggplot(aes(x = "", y = gdp_capita)) +
-  geom_boxplot(outlier.colour="red", outlier.shape=8,
-               outlier.size=4)
 
 #method 3
 boxplot(df$gdp_capita)$out
-df_out <- boxplot(df$gdp_capita, plot = FALSE)$out
+boxplot(df$population)$out
+outl <- c(boxplot(df$population)$out)
+
+
+df_out <- boxplot(df$population, plot = FALSE)$out
 
 #__________________Missing information
+#check which columns have missing info
+is.na(df)
+colSums(is.na(df)) 
+str(df)
+
 
 df2 <- df %>%
   mutate(gdp_capita_some_na = as.numeric(ifelse(gdp_capita >50000 & gdp_capita  < 53000,"", gdp_capita)))
+colSums(is.na(df2)) 
 view(df2)
-str(df2)
-#check which columns have missing info
-colSums(is.na(df2))
 
 #visualize missing info
 install.packages("VIM")              # Install VIM package
 library("VIM")                       # Load VIM
 
-aggr(df2) #$gdp_capita_some_na, combined = TRUE)                           # Create aggregation plot
 summary(aggr(df2, plot=FALSE))
-summary(aggr(df2, plot=TRUE))
+aggr(df2$gdp_capita_some_na) #$gdp_capita_some_na, combined = TRUE)                           # Create aggregation plot
 
 #https://www.rdocumentation.org/packages/VIM/versions/6.1.1/topics/barMiss
-barMiss(df2,interactive=TRUE)#$gdp_capita_some_na)                           # Create aggregation plot
+#barMiss(df2,interactive=TRUE)#$gdp_capita_some_na)                           # Create aggregation plot
 barMiss(df2$gdp_capita_some_na, only.miss = TRUE)
 histMiss(df2$gdp_capita_some_na)                           # Create aggregation plot
 
+# Try and do this: _______create your own function to visualize missing info 
 
-
-#some inputations
+#some imputations
 #. median and median
 median_imputation <- df2 %>%
   mutate(gdp_capita_some_na = replace(gdp_capita_some_na,
-                                  is.na(gdp_capita_some_na),
-                                  median(gdp_capita_some_na, na.rm = TRUE)))
-
+                                is.na(gdp_capita_some_na),
+                                median(gdp_capita_some_na, na.rm = TRUE)))
 mean_imputation <- df2 %>%
   mutate(gdp_capita_some_na = replace(gdp_capita_some_na,
-                                      is.na(gdp_capita_some_na),
-                                      mean(gdp_capita_some_na, na.rm = TRUE)))
+                                is.na(gdp_capita_some_na),
+                                mean(gdp_capita_some_na, na.rm = TRUE)))
+colSums(is.na(mean_imputation)) 
+barMiss(mean_imputation$gdp_capita_some_na, only.miss = TRUE)
 
 1#2. KNN method using Machine Learning?
+#caret
