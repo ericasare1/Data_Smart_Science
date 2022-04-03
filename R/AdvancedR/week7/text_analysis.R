@@ -96,3 +96,33 @@ data2 <- data.frame(
   rename(sequence = num) %>%
   str_split_fixed(date, "/", c("year", "month", "day")) %>%
   view()
+
+
+# regular expression
+#wild character
+words <- c("goat good great seth")
+str_extract_all(words, regex("goa[.]d"))
+
+"hit hat hot him hilt" %>% str_extract_all("h.t")
+str_extract_all(words, regex("g[.][.][.]"))
+
+
+
+str_detect(words, regex("go[oa]d"))
+
+#or
+pattern = regex("
+  go[oa]d                #any of the characters in [] can be a match  
+  
+                ", comments = TRUE)
+str_detect(words, pattern)
+
+#negative character sets
+
+pattern2 = regex("
+  go[^oa]d                #any of the characters in [] can be a match  
+  
+                ", comments = TRUE)
+str_detect(words, pattern2)
+
+
